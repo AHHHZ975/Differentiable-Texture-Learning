@@ -1,6 +1,10 @@
 The code for the paper 
 # End-to-End Fine-Tuning of 3D Texture Generation using Differentiable Rewards
+
+![Teaser](https://github.com/user-attachments/assets/46b39c23-185f-4f85-9af9-a9863d5ade2b)
+
 While recent 3D generative models can produce high-quality texture images, they often fail to capture human preferences or meet task-specific requirements. Moreover, a core challenge in the 3D texture generation domain is that most existing approaches rely on repeated calls to 2D text-to-image generative models, which lack an inherent understanding of the 3D structure of the input 3D mesh object. To alleviate these issues, we propose an end-to-end differentiable, reinforcement-learning-free framework that embeds human feedback, expressed as differentiable reward functions, directly into the 3D texture synthesis pipeline. By back-propagating preference signals through both geometric and appearance modules of the proposed framework, our method generates textures that respect the 3D geometry structure and align with desired criteria. To demonstrate its versatility, we introduce three novel geometry-aware reward functions, which offer a more controllable and interpretable pathway for creating high-quality 3D content from natural language. By conducting qualitative, quantitative, and user-preference evaluations against state-of-the-art methods, we demonstrate that our proposed strategy consistently outperforms existing approaches. We will make our implementation code publicly available upon acceptance of the paper.
+
 
 # Installation
 1- We recommend using a virtual environment or a conda environment.
@@ -30,7 +34,22 @@ pip install ml-collections absl-py wandb inflect pydantic
 pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu121                           ### for xFormers
 ```
 
-# Some tips for any potential issuer during or after the installation process
+
+# Running the code
+## Training 
+To train the 3D texture generation model using different rewards, first set ```common_config['training'] = True``` in the ```Config.py```. Then, run the following command:
+
+```
+CUDA_VISIBLE_DEVICES=0 python train_texture_diff_learning.py
+```
+
+## Inference
+To perform the test/inference stage of all models, first set ```common_config['inference'] = True``` in the ```Config.py```. Then, run the following command.
+```
+CUDA_VISIBLE_DEVICES=0 python train_texture_diff_learning.py
+```
+
+# Some tips for any potential issues during or after the installation process
 1- For users on Windows 10 or 11, if you have issues with the nvdiffrast package when running the code, it is most probably because of two things:
 
 a) You should install Microsoft Visual Studio 2022 to provide a C++ compiler for the nvdiffrast. This is because the nvdiffrast runs the compiler existing in a directory of Microsoft Visual Studio on Windows. (Reference: https://github.com/NVlabs/nvdiffrast/issues/154)
