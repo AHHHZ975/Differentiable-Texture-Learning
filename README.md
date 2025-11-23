@@ -5,6 +5,8 @@ The code for the paper
 
 While recent 3D generative models can produce high-quality texture images, they often fail to capture human preferences or meet task-specific requirements. Moreover, a core challenge in the 3D texture generation domain is that most existing approaches rely on repeated calls to 2D text-to-image generative models, which lack an inherent understanding of the 3D structure of the input 3D mesh object. To alleviate these issues, we propose an end-to-end differentiable, reinforcement-learning-free framework that embeds human feedback, expressed as differentiable reward functions, directly into the 3D texture synthesis pipeline. By back-propagating preference signals through both geometric and appearance modules of the proposed framework, our method generates textures that respect the 3D geometry structure and align with desired criteria. To demonstrate its versatility, we introduce three novel geometry-aware reward functions, which offer a more controllable and interpretable pathway for creating high-quality 3D content from natural language. By conducting qualitative, quantitative, and user-preference evaluations against state-of-the-art methods, we demonstrate that our proposed strategy consistently outperforms existing approaches. We will make our implementation code publicly available upon acceptance of the paper.
 
+![ThreeRewards_Results](https://github.com/user-attachments/assets/7fc9d661-5787-4c63-ba84-a5096d665571)
+
 
 # Installation
 1- We recommend using a virtual environment or a conda environment.
