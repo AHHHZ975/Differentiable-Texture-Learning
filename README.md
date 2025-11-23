@@ -98,3 +98,16 @@ In "System Properties," click "Environment Variables." Under "System variables,"
 
 c) Restart your Terminal or IDE: After setting the environment variable, restart the terminal or the IDE you're using.
 
+
+# Citation
+We appreciate your interest in our research. If you want to use our work, please consider the proper citation format written below.
+```
+
+@article{zamani2025geometry,
+  title={End-to-End Fine-Tuning of 3D Texture Generation using Differentiable Rewards},
+  author={Zamani, AmirHossein and Xie, Tianhao and Aghdam, Amir G and Popa, Tiberiu and Belilovsky, Eugene},
+  journal={arXiv preprint arXiv:2506.18331},
+  year={2025}
+}
+```
+
