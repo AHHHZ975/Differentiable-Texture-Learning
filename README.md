@@ -1,5 +1,7 @@
 The code for the paper 
 # End-to-End Fine-Tuning of 3D Texture Generation using Differentiable Rewards
+* ### See the project webpage [[here]](https://ahhhz975.github.io/DifferentiableTextureLearning/)
+* ### See the paper [[here]](https://arxiv.org/pdf/2506.18331)
 
 ![Teaser](https://github.com/user-attachments/assets/46b39c23-185f-4f85-9af9-a9863d5ade2b)
 
